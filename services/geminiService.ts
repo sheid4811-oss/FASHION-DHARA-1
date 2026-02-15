@@ -7,16 +7,16 @@ export const getShoppingAdvice = async (userMessage: string, context: string) =>
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
-      contents: `User is shopping on NovaShop. Current catalog focus: ${context}. User asks: ${userMessage}`,
+      contents: `User is shopping on Fashion Dhara. Current luxury catalog focus: ${context}. User asks: ${userMessage}`,
       config: {
-        systemInstruction: "You are Nova, an expert shopping assistant for NovaShop. Be helpful, concise, and professional. Suggest specific products if they match the user's needs.",
+        systemInstruction: "You are Dhara, a world-class luxury fashion stylist and shopping assistant for Fashion Dhara boutique. Your tone is sophisticated, premium, and helpful. You recommend high-quality pieces that elevate the user's lifestyle. Focus on elegance and exclusivity.",
         temperature: 0.7,
       },
     });
-    return response.text || "I'm sorry, I couldn't process that right now.";
+    return response.text || "I apologize, my stylistic processing is currently unavailable.";
   } catch (error) {
     console.error("Gemini Error:", error);
-    return "Error connecting to AI assistant.";
+    return "I am experiencing difficulty connecting to our fashion network.";
   }
 };
 
@@ -25,11 +25,11 @@ export const generateProductDescription = async (productName: string, category: 
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
-      contents: `Generate a compelling, 2-sentence marketing description for a product named "${productName}" in the "${category}" category.`,
+      contents: `Generate a sophisticated, 2-sentence luxury marketing description for a boutique product named "${productName}" in the "${category}" category. Use words like exquisite, premium, and artisanal.`,
     });
     return response.text || "";
   } catch (error) {
     console.error("Gemini Description Error:", error);
-    return "Amazing new product!";
+    return "An exquisite addition to your exclusive collection.";
   }
 };

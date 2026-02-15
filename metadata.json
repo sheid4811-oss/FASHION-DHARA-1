@@ -1,6 +1,6 @@
 {
-  "name": "NovaShop - AI-Enhanced E-commerce",
-  "description": "A modern, responsive e-commerce platform with an AI-powered shopping assistant, product management, and seamless checkout experience.",
+  "name": "Fashion Dhara - Premium Fashion & Trends",
+  "description": "Exquisite premium fashion and accessories. Shop the latest trends with our AI fashion assistant.",
   "requestFramePermissions": [
     "camera",
     "microphone"
