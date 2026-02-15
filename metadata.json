@@ -1,0 +1,8 @@
+{
+  "name": "NovaShop - AI-Enhanced E-commerce",
+  "description": "A modern, responsive e-commerce platform with an AI-powered shopping assistant, product management, and seamless checkout experience.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
